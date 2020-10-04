@@ -1,6 +1,6 @@
 class tint {
   class furniture {
-    file = "furniture_mod\furniture\functions";
+    file = "Tinter-Furniture-Mod\furniture\functions";
     class dressDown {};
     class dressUp {};
     class translate {};

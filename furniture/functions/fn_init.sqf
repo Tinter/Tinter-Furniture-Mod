@@ -7,7 +7,7 @@
 tint_range = RANGE;
 tint_seed = SEED;
 
-call compile preprocessFileLineNumbers "furniture_mod\furniture\import.sqf";
+call compile preprocessFileLineNumbers "Tinter-Furniture-Mod\furniture\import.sqf";
 
 // no HC or dedicated server allowed
 if !(hasInterface) exitWith {
