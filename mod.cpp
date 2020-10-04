@@ -6,3 +6,7 @@ overview = "Tinter's script to generate dynamic furniture, as a mod.";
 author = "Tinter";
 overviewText = "Tinter's script to generate dynamic furniture, as a mod.";
 overviewFootnote = "Please use the original script in your missions";
+picture = "Tinter-Furniture-Mod\logo.paa";
+logo = "Tinter-Furniture-Mod\logo.paa";
+logoOver = "Tinter-Furniture-Mod\logo.paa";
+overviewPicture = "Tinter-Furniture-Mod\logo.paa";
