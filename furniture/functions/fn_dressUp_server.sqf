@@ -1,4 +1,4 @@
 params["_house"];
 
 if (hasInterface) exitWith {};
-[_house] call tint_fnc_dressUp;
+[_house] call frn_fnc_dressUp;

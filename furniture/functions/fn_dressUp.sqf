@@ -19,7 +19,7 @@ if (_house getVariable ["tint_house_initialized", false]) then {
 //If not, then we load and calculate compositions
   
   //Check whether it uses a parent class
-  private _class = [_house getVariable "tint_house_class"] call tint_fnc_translate;
+  private _class = [_house getVariable "tint_house_class"] call frn_fnc_translate;
   private _compositions = tint_compNamespace getVariable [_class, [[]]];
   
   //Select one of the compositions to use
@@ -69,7 +69,7 @@ if (_house getVariable ["tint_house_initialized", false]) then {
   };
   
   //Send out calculations to other computers
-  [_house, _composition] remoteExecCall ["tint_fnc_updateHouse", 0];
+  [_house, _composition] remoteExecCall ["frn_fnc_updateHouse", 0];
 };
 
 
@@ -77,11 +77,11 @@ private _ehd = _house addEventHandler ["dammaged", {
     [{
         params ["_house"];
         if (!alive _house) then {
-            [_house] call tint_fnc_dressDown;
+            [_house] call frn_fnc_dressDown;
         };
     }, _this, 0.1] call cba_fnc_waitAndExecute;
 }];
 _house setVariable ["tint_house_damagedEH", _ehd];
-private _eh = _house addEventHandler ["killed", {params ["_house"];[_house] call tint_fnc_dressDown;}];
+private _eh = _house addEventHandler ["killed", {params ["_house"];[_house] call frn_fnc_dressDown;}];
 _house setVariable ["tint_house_killedEH", _eh];
 _house setVariable ["tint_house_objects", _objects];

@@ -1,4 +1,4 @@
-class tint {
+class frn {
   class furniture {
     file = "Tinter-Furniture-Mod\furniture\functions";
     class dressDown {};

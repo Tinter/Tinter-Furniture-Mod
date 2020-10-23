@@ -4,6 +4,8 @@
 #define SEED 42
 #define LIMIT 42
 
+if (missionNameSpace getVariable ["tint_frnscript_running", false]) exitWith {};
+
 tint_range = RANGE;
 tint_seed = SEED;
 
@@ -15,7 +17,7 @@ if !(hasInterface) exitWith {
     [{
       params ["_houses"];
       {
-        [_x] call tint_fnc_dressDown_server;
+        [_x] call frn_fnc_dressDown_server;
       } forEach _houses;
     }, _this] call CBA_fnc_execNextFrame;
   }] call CBA_fnc_addEventHandler;
@@ -23,7 +25,7 @@ if !(hasInterface) exitWith {
     [{
       params ["_houses"];
       {
-        [_x] call tint_fnc_dressUp_server;
+        [_x] call fnc_fnc_dressUp_server;
       } forEach _houses;
     }, _this] call CBA_fnc_execNextFrame;
   }] call CBA_fnc_addEventHandler;
@@ -110,11 +112,11 @@ if (!isMultiplayer) then {
 
   while {tint_houses} do {
     if (count tint_dressUpHouses > 0) then {
-      [tint_dressUpHouses#0] call tint_fnc_dressUp;
+      [tint_dressUpHouses#0] call frn_fnc_dressUp;
       tint_dressUpHouses deleteAt 0;
     } else {
       if (count tint_dressDownHouses > 0) then {
-        [tint_dressDownHouses#0] call tint_fnc_dressDown;
+        [tint_dressDownHouses#0] call frn_fnc_dressDown;
         tint_dressDownHouses deleteAt 0;
       }
     };
