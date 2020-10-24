@@ -5,7 +5,7 @@ class CfgPatches
 		// Meta information for editor
 		name = "Tinter Furniture";
 		author = "Tinter";
-		url = "https://github.com/Tinter/Tinter-Furniture";
+		url = "https://github.com/Tinter/Tinter-Furniture-Mod";
 
 		// Minimum compatible version. When the game's version is lower, pop-up warning will appear when launching the game.
 		requiredVersion = 1.60; 
@@ -20,4 +20,9 @@ class CfgPatches
 };
 class CfgFunctions {
   #include "furniture\func.hpp"
+};
+class Extended_PreInit_EventHandlers {
+    class tinter_furniture_mod_pre_init {
+        init = "call compile preprocessFileLineNumbers 'Tinter-Furniture-Mod\furniture\XEH_preInit.sqf'";
+    };
 };
