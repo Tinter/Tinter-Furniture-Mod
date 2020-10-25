@@ -5,6 +5,6 @@ class frn {
     class dressUp {};
     class translate {};
     class updateHouse {};
-    class init {postInit=1;};
+    class init {};
   };
 };
