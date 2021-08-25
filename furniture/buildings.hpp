@@ -257,6 +257,10 @@ _validBuildings = [
   "land_gm_euro_farmhouse_03_win",
   "land_gm_euro_fuelstation_01_w",
   "land_gm_euro_fuelstation_01_w_win",
+  "land_gm_euro_gardenshed_02",
+  "land_gm_euro_gardenshed_03_01",
+  "land_gm_euro_gardenshed_04",
+  "land_gm_euro_gardenshed_05",
   "land_gm_euro_house_01_d",
   "land_gm_euro_house_01_d_win",
   "land_gm_euro_house_01_e",
@@ -368,7 +372,12 @@ _validBuildings = [
   "land_gm_euro_shop_02_e",
   "land_gm_euro_shop_02_e_win",
   "land_gm_euro_shop_02_w",
-  "land_gm_euro_shop_02_w_win"
+  "land_gm_euro_shop_02_w_win",
+  //Buildings used on Rosche
+  "Land_WL_House_01_A",
+  "Land_WL_House_02_A",
+  "Land_WL_House_03_A",
+  "Land_WL_House_04_A"
 ];
 
 tint_translationNamespace = [] call CBA_fnc_createNamespace;

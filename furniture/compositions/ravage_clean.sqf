@@ -1,4 +1,7 @@
-//By Tinter based on work by EO
+/*
+Altis, Livonia and Tanoa buildings with an abandoned look
+By EO
+*/
 _compositions = tint_compNamespace getVariable ["Land_HealthCenter_01_F", []];
 _compositions append [[["Land_TableDesk_F",[3.05159,0.384364,1.08767],[0.0558166,0.998441,0],[0,0,1]],["Land_ChairWood_F",[3.1407,1.78963,0.679957],[-0.268377,0.963314,0],[0,0,1]],["Land_OfficeCabinet_01_F",[5.27742,3.41463,1.46111],[0.0123527,0.999924,0],[0,0,1]],["Land_IntravenStand_01_2bags_F",[-1.16643,-4.00724,1.61201],[-0.999995,-0.0030152,0],[0,0,1]],["Land_LuggageHeap_02_F",[-10.6967,0.274014,0.986967],[-0.999995,-0.0030152,0],[0,0,1]],["Land_LuggageHeap_01_F",[-10.6964,3.16658,1.19421],[-0.99999,0.0044529,0],[0,0,1]],["Land_Sacks_heap_F",[-2.46062,3.03426,1.0714],[0.0353022,0.999377,0],[0,0,1]],["Land_IntravenStand_01_1bag_F",[-4.61028,0.253994,1.61201],[-0.999995,-0.0030152,0],[0,0,1]],["Land_IntravenStand_01_2bags_F",[-10.9113,-6.9843,1.61201],[-0.999995,-0.0030152,0],[0,0,1]],["Land_WoodenCrate_01_F",[-8.67233,-7.03019,1.0288],[-0.999995,-0.0030152,0],[0,0,1]],["Land_WoodenCrate_01_F",[-1.26384,-6.66398,1.0288],[0.0153504,-0.999882,0],[0,0,1]],["Land_WoodenCrate_01_F",[7.6219,0.0118039,1.0288],[-0.0118204,0.99993,0],[0,0,1]],["Land_WoodenCrate_01_F",[7.49372,5.12264,1.03713],[-0.00313982,-0.999995,0],[0,0,1]]]];
 tint_compNamespace setVariable ["Land_HealthCenter_01_F", _compositions];
