@@ -52,12 +52,23 @@ tint_script_main = [_validBuildings] spawn {
         _house setVariable ["tint_house_class", _validBuildings#_index];
       };
     } forEach _buildings;
-    //Sort list so that closest house is first
+    
+	// KP Liberation fix
+	if !(isNil{FOB_typename}) then {
+		private _fobBuildings = [];
+		{
+			_buildings = (_x nearObjects ["House_F", GRLIB_fob_range]) select {!(isObjectHidden _x) && {!(_x getVariable ["tint_house_blacklisted", false])} && {alive _x}};
+			_fobBuildings append _buildings;
+		} forEach GRLIB_all_fobs;
+		tint_activeHouses = tint_activeHouses - _fobBuildings;
+	};
+	
+	//Sort list so that closest house is first
     tint_activeHouses = [tint_activeHouses, [_pos], {_input0 distance _x}, "ASCEND"] call BIS_fnc_sortBy;
     
     private _dressUpServer = [];
     private _dressDownServer = [];
-    
+
     //Grab tint_houseLimit closest houses and check if they're within range
     private _outOfRange = 0;
     for "_i" from 0 to (tint_houseLimit-1 min (count tint_activeHouses - 1)) do {
