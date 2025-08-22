@@ -8,8 +8,6 @@ Furthermore, this only uses the default furniture compositions, so you miss out 
 Download a release and extract the folder into your Arma 3 folder, then enable it in the launcher you use.
 
 ### To build:
-Clone the project, then pack this into a PBO using your favourite arma tools, for armake2 I run 
-```bash
-armake2 build Tinter-Furniture-Mod/ Tinter-Furniture-Mod.pbo
-```
-then place the .pbo in "Arma 3/@tinter_furniture/addons".
+Clone the project, then pack this into a PBO using your favourite arma tools.
+I generate keys with armake2 and then pack this using Arma 3 Tools addonbuilder, making sure to include .sqf and .hpp files.
+Then place the .pbo in "@Tinter-Furniture-Mod/addons".
